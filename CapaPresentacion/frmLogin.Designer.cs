@@ -124,26 +124,32 @@ namespace CapaPresentacion
             // 
             this.txtuser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.txtuser.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtuser.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.txtuser.Location = new System.Drawing.Point(49, 32);
+            this.txtuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtuser.ForeColor = System.Drawing.Color.DimGray;
+            this.txtuser.Location = new System.Drawing.Point(46, 32);
             this.txtuser.Multiline = true;
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(180, 20);
             this.txtuser.TabIndex = 5;
+            this.txtuser.Text = "USUARIO";
+            this.txtuser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtuser.Enter += new System.EventHandler(this.txtuser_Enter);
+            this.txtuser.Leave += new System.EventHandler(this.txtuser_Leave);
             // 
             // txtpassword
             // 
             this.txtpassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.txtpassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpassword.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.txtpassword.Location = new System.Drawing.Point(49, 92);
+            this.txtpassword.ForeColor = System.Drawing.Color.DimGray;
+            this.txtpassword.Location = new System.Drawing.Point(46, 91);
             this.txtpassword.Name = "txtpassword";
-            this.txtpassword.PasswordChar = '*';
             this.txtpassword.Size = new System.Drawing.Size(180, 19);
             this.txtpassword.TabIndex = 6;
-            this.txtpassword.UseSystemPasswordChar = true;
+            this.txtpassword.Text = "CONTRASEÑA";
+            this.txtpassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtpassword.Enter += new System.EventHandler(this.txtpassword_Enter);
+            this.txtpassword.Leave += new System.EventHandler(this.txtpassword_Leave);
             // 
             // panel2
             // 

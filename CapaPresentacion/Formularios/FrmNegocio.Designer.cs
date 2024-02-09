@@ -104,6 +104,7 @@ namespace CapaPresentacion.Formularios
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(327, 20);
             this.txtDireccion.TabIndex = 38;
+            this.txtDireccion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
@@ -122,6 +123,7 @@ namespace CapaPresentacion.Formularios
             this.txtRuc.Name = "txtRuc";
             this.txtRuc.Size = new System.Drawing.Size(327, 20);
             this.txtRuc.TabIndex = 36;
+            this.txtRuc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 
@@ -151,6 +153,7 @@ namespace CapaPresentacion.Formularios
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(327, 20);
             this.txtNombre.TabIndex = 32;
+            this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnGuardar
             // 

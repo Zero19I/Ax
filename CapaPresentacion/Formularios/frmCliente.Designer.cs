@@ -29,10 +29,10 @@ namespace CapaPresentacion.Formularios
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvdata = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.btnLimpiar = new FontAwesome.Sharp.IconButton();
@@ -43,16 +43,14 @@ namespace CapaPresentacion.Formularios
             this.label8 = new System.Windows.Forms.Label();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnBuscar = new FontAwesome.Sharp.IconButton();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.cdoBusqueda = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnLimpiarBuscador = new FontAwesome.Sharp.IconButton();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
@@ -61,8 +59,8 @@ namespace CapaPresentacion.Formularios
             this.txtIndice = new System.Windows.Forms.TextBox();
             this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Id = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,8 +79,8 @@ namespace CapaPresentacion.Formularios
             this.dgvdata.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.btnSeleccionar,
             this.Id,
-            this.Usuario,
             this.Nombre,
+            this.Apellido,
             this.Correo,
             this.Telefono,
             this.EstadoValor,
@@ -108,7 +106,7 @@ namespace CapaPresentacion.Formularios
             this.btnEliminar.IconColor = System.Drawing.Color.White;
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnEliminar.IconSize = 20;
-            this.btnEliminar.Location = new System.Drawing.Point(234, 487);
+            this.btnEliminar.Location = new System.Drawing.Point(234, 422);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(104, 29);
             this.btnEliminar.TabIndex = 24;
@@ -128,7 +126,7 @@ namespace CapaPresentacion.Formularios
             this.btnLimpiar.IconColor = System.Drawing.Color.White;
             this.btnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnLimpiar.IconSize = 20;
-            this.btnLimpiar.Location = new System.Drawing.Point(122, 487);
+            this.btnLimpiar.Location = new System.Drawing.Point(122, 422);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(104, 29);
             this.btnLimpiar.TabIndex = 23;
@@ -148,7 +146,7 @@ namespace CapaPresentacion.Formularios
             this.btnGuardar.IconColor = System.Drawing.Color.White;
             this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnGuardar.IconSize = 20;
-            this.btnGuardar.Location = new System.Drawing.Point(11, 487);
+            this.btnGuardar.Location = new System.Drawing.Point(11, 422);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(104, 29);
             this.btnGuardar.TabIndex = 22;
@@ -159,8 +157,9 @@ namespace CapaPresentacion.Formularios
             // 
             // cdoEstado
             // 
+            this.cdoEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cdoEstado.FormattingEnabled = true;
-            this.cdoEstado.Location = new System.Drawing.Point(11, 417);
+            this.cdoEstado.Location = new System.Drawing.Point(11, 352);
             this.cdoEstado.Name = "cdoEstado";
             this.cdoEstado.Size = new System.Drawing.Size(161, 21);
             this.cdoEstado.TabIndex = 21;
@@ -170,7 +169,7 @@ namespace CapaPresentacion.Formularios
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(8, 396);
+            this.label9.Location = new System.Drawing.Point(8, 331);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(58, 18);
             this.label9.TabIndex = 17;
@@ -178,17 +177,19 @@ namespace CapaPresentacion.Formularios
             // 
             // txtCelular
             // 
-            this.txtCelular.Location = new System.Drawing.Point(11, 346);
+            this.txtCelular.Location = new System.Drawing.Point(11, 281);
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(314, 20);
             this.txtCelular.TabIndex = 16;
+            this.txtCelular.TextChanged += new System.EventHandler(this.txtCelular_TextChanged);
+            this.txtCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCelular_KeyPress);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(8, 325);
+            this.label8.Location = new System.Drawing.Point(8, 260);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(57, 18);
             this.label8.TabIndex = 15;
@@ -196,7 +197,7 @@ namespace CapaPresentacion.Formularios
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(11, 280);
+            this.txtCorreo.Location = new System.Drawing.Point(11, 215);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(314, 20);
             this.txtCorreo.TabIndex = 14;
@@ -206,25 +207,25 @@ namespace CapaPresentacion.Formularios
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(8, 259);
+            this.label7.Location = new System.Drawing.Point(8, 194);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(57, 18);
             this.label7.TabIndex = 13;
             this.label7.Text = "Correo";
             // 
-            // textBox3
+            // txtApellido
             // 
-            this.textBox3.Location = new System.Drawing.Point(11, 218);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(314, 20);
-            this.textBox3.TabIndex = 12;
+            this.txtApellido.Location = new System.Drawing.Point(11, 153);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(314, 20);
+            this.txtApellido.TabIndex = 12;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(8, 197);
+            this.label6.Location = new System.Drawing.Point(8, 132);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 18);
             this.label6.TabIndex = 11;
@@ -232,7 +233,7 @@ namespace CapaPresentacion.Formularios
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(11, 155);
+            this.txtNombre.Location = new System.Drawing.Point(11, 90);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(314, 20);
             this.txtNombre.TabIndex = 10;
@@ -242,7 +243,7 @@ namespace CapaPresentacion.Formularios
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(8, 134);
+            this.label5.Location = new System.Drawing.Point(8, 69);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 18);
             this.label5.TabIndex = 9;
@@ -268,15 +269,9 @@ namespace CapaPresentacion.Formularios
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Location = new System.Drawing.Point(11, 90);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(314, 20);
-            this.txtUsuario.TabIndex = 8;
-            // 
             // cdoBusqueda
             // 
+            this.cdoBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cdoBusqueda.FormattingEnabled = true;
             this.cdoBusqueda.Location = new System.Drawing.Point(372, 101);
             this.cdoBusqueda.Name = "cdoBusqueda";
@@ -304,17 +299,6 @@ namespace CapaPresentacion.Formularios
             this.label12.Size = new System.Drawing.Size(123, 19);
             this.label12.TabIndex = 35;
             this.label12.Text = "Lista de cliente";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(8, 69);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 18);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Usuario";
             // 
             // label1
             // 
@@ -369,12 +353,10 @@ namespace CapaPresentacion.Formularios
             this.pnldetalleusuario.Controls.Add(this.label8);
             this.pnldetalleusuario.Controls.Add(this.txtCorreo);
             this.pnldetalleusuario.Controls.Add(this.label7);
-            this.pnldetalleusuario.Controls.Add(this.textBox3);
+            this.pnldetalleusuario.Controls.Add(this.txtApellido);
             this.pnldetalleusuario.Controls.Add(this.label6);
             this.pnldetalleusuario.Controls.Add(this.txtNombre);
             this.pnldetalleusuario.Controls.Add(this.label5);
-            this.pnldetalleusuario.Controls.Add(this.txtUsuario);
-            this.pnldetalleusuario.Controls.Add(this.label4);
             this.pnldetalleusuario.Controls.Add(this.label1);
             this.pnldetalleusuario.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnldetalleusuario.Location = new System.Drawing.Point(0, 0);
@@ -414,26 +396,26 @@ namespace CapaPresentacion.Formularios
             this.Id.ReadOnly = true;
             this.Id.Visible = false;
             // 
-            // Usuario
-            // 
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Usuario.DefaultCellStyle = dataGridViewCellStyle25;
-            this.Usuario.HeaderText = "Usuario";
-            this.Usuario.Name = "Usuario";
-            this.Usuario.ReadOnly = true;
-            // 
             // Nombre
             // 
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nombre.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nombre.DefaultCellStyle = dataGridViewCellStyle1;
             this.Nombre.HeaderText = "Nombres";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
             // 
+            // Apellido
+            // 
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Apellido.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Apellido.HeaderText = "Apellidos";
+            this.Apellido.Name = "Apellido";
+            this.Apellido.ReadOnly = true;
+            // 
             // Correo
             // 
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Correo.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Correo.DefaultCellStyle = dataGridViewCellStyle3;
             this.Correo.HeaderText = "Correo";
             this.Correo.Name = "Correo";
             this.Correo.ReadOnly = true;
@@ -453,8 +435,8 @@ namespace CapaPresentacion.Formularios
             // 
             // Estado
             // 
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Estado.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Estado.DefaultCellStyle = dataGridViewCellStyle4;
             this.Estado.HeaderText = "Estado";
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
@@ -498,16 +480,14 @@ namespace CapaPresentacion.Formularios
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label5;
         private FontAwesome.Sharp.IconButton btnBuscar;
-        private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.ComboBox cdoBusqueda;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton btnLimpiarBuscador;
         private System.Windows.Forms.TextBox txtBusqueda;
@@ -516,8 +496,8 @@ namespace CapaPresentacion.Formularios
         private System.Windows.Forms.TextBox txtIndice;
         private System.Windows.Forms.DataGridViewButtonColumn btnSeleccionar;
         private System.Windows.Forms.DataGridViewButtonColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Usuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoValor;

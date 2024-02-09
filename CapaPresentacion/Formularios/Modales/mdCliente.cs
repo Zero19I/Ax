@@ -39,7 +39,7 @@ namespace CapaPresentacion.Modales
             foreach (Cliente item in lista)
             { 
                 if(item.Estado)
-                dgvdata.Rows.Add(new object[] {item.Documento, item.Nombre });
+                dgvdata.Rows.Add(new object[] {item.Nombre, item.Apellido });
             }
         }
 
@@ -52,8 +52,8 @@ namespace CapaPresentacion.Modales
             {
                 _cliente = new Cliente()
                 {
-                    Documento = dgvdata.Rows[iRow].Cells["Usuario"].Value.ToString(),
-                    Nombre = dgvdata.Rows[iRow].Cells["Nombre"].Value.ToString()
+                    Nombre = dgvdata.Rows[iRow].Cells["Nombre"].Value.ToString(),
+                    Apellido = dgvdata.Rows[iRow].Cells["Apellido"].Value.ToString()
 
                 };
 

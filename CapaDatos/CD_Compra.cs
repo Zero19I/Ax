@@ -84,7 +84,7 @@ namespace CapaDatos
                     oconexion.Open();
 
                     StringBuilder query = new StringBuilder();
-                    query.AppendLine("SELECT c.PkCompra_Id,u.Nombre,p.Documento,p.RazonSocial,c.TipoDocumento,");
+                    query.AppendLine("SELECT c.PkCompra_Id,u.Nombre,u.Apellidos,p.Documento,p.RazonSocial,c.TipoDocumento,");
                     query.AppendLine("c.NumeroDocumento,c.MontoTotal,CONVERT(CHAR(10),c.FechaRegistro,103)[FechaRegistro] FROM Tbl_Compra c");
                     query.AppendLine("INNER JOIN Tbl_Usuario u on u.PkUsuario_Id = c.FkUsuario_Id");
                     query.AppendLine("INNER JOIN Tbl_Proveedor p on p.PkProveedor_Id = c.FkProveedor_Id");
@@ -92,7 +92,7 @@ namespace CapaDatos
 
                     SqlCommand cmd = new SqlCommand(query.ToString(), oconexion);
                     cmd.Parameters.AddWithValue("@numero", numero);
-                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandType = System.Data.CommandType.Text;
 
                     using (SqlDataReader dr = cmd.ExecuteReader())
                     {
@@ -100,12 +100,12 @@ namespace CapaDatos
                         {
                             obj = new Compra()
                             {
-                                PkCompra_Id = Convert.ToInt32(dr["PkCompra_Id"]),
-                                oUsuario = new Usuario() { Nombre = dr["Nombre"].ToString() },
+                                PkCompra_Id = int.Parse(dr["PkCompra_Id"].ToString()),
+                                oUsuario = new Usuario() { Nombre = dr["Nombre"].ToString(), Apellidos = dr["Apellidos"].ToString() },
                                 oProveedor = new Proveedor() { Documento = dr["Documento"].ToString(), RazonSocial = dr["RazonSocial"].ToString() },
                                 TipoDocumento = dr["TipoDocumento"].ToString(),
                                 NumeroDocumento = dr["NumeroDocumento"].ToString(),
-                                MontoTotal = Convert.ToInt32(dr["MontoTotal"].ToString()),
+                                MontoTotal = Convert.ToDecimal(dr["MontoTotal"].ToString()),
                                 FechaRegistro = dr["FechaRegistro"].ToString()
                             };
                         }

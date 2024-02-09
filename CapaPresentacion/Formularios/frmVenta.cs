@@ -38,9 +38,9 @@ namespace CapaPresentacion.Formularios
 
                 if (result == DialogResult.OK)
                 {
-                    txtNumDocumentoP.Text = modal._cliente.Documento;
-                    txtnombrec.Text = modal._cliente.Nombre;
-                    txtCodProducto.Select();
+                    txtNumDocumentoP.Text = modal._cliente.Nombre;
+                    txtnombrec.Text = modal._cliente.Apellido;
+                    btnBuscarProducto.Select();
                 }
 
                 else
@@ -296,7 +296,9 @@ namespace CapaPresentacion.Formularios
             {
                 if (pagacon < total)
                 {
-                    txtcambio.Text = "0.00";
+                    MessageBox.Show("REVISE EL PAGO DEL CLIENTE", "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                    //txtcambio.Text = "0.00";
                 }
 
                 else
@@ -322,17 +324,27 @@ namespace CapaPresentacion.Formularios
                 MessageBox.Show("DEBE SELECCIONAR UN CLIENTE", "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            if (txtnombrec.Text == "")
+
+            else if (txtnombrec.Text == "")
             {
                 MessageBox.Show("DEBE SELECCIONAR UN CLIENTE", "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
-            if (dgvdata.Rows.Count < 1)
+            else if (txtPagacon.Text == "" || txtcambio.Text == "")
+            {
+                MessageBox.Show("REVISE LOS DATOS DE PAGO Y CAMBIO", "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            else if (dgvdata.Rows.Count < 1)
             {
                 MessageBox.Show("DEBE INGRESAR PRODUCTOS EN LA VENTA", "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            CalcularCambio();
+
+            
 
             DataTable detalle_venta = new DataTable();
 
@@ -349,13 +361,23 @@ namespace CapaPresentacion.Formularios
                     row.Cells["Precio"].Value.ToString(),
                     row.Cells["Cantidad"].Value.ToString(),
                     row.Cells["SubTotal"].Value.ToString()
+                });
+            }
 
+            DataTable Obtener_IdPoducto = new DataTable();
+            Obtener_IdPoducto.Columns.Add("IdProducto", typeof(int));
+
+            foreach (DataGridViewRow row in dgvdata.Rows)
+            {
+                Obtener_IdPoducto.Rows.Add(new object[]
+                {
+                  Convert.ToInt32(row.Cells["Id"].Value.ToString())
                 });
             }
 
             int idcorrelativo = new CN_Venta().ObtenerCorrelativo();
             string numerodocumento = string.Format("{0:00000}", idcorrelativo);
-            CalcularCambio();
+            
 
             Venta oVenta = new Venta()
             {
@@ -370,7 +392,7 @@ namespace CapaPresentacion.Formularios
             };
 
             string mensaje = string.Empty;
-            bool respuesta = new CN_Venta().Registrar(oVenta, detalle_venta, out mensaje);
+            bool respuesta = new CN_Venta().Registrar(oVenta, detalle_venta, out mensaje, Obtener_IdPoducto);
 
             if (respuesta)
             {
@@ -396,5 +418,6 @@ namespace CapaPresentacion.Formularios
             }
 
         }
+
     }
 }

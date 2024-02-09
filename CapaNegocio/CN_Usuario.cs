@@ -32,7 +32,22 @@ namespace CapaNegocio
                 Mensaje += "ES NECESARIO EL NOMBRE\n";
             }
 
-            if(obj.Clave == "")
+            if (obj.Apellidos == "")
+            {
+                Mensaje += "ES NECESARIO EL APELLIDO\n";
+            }
+
+            if (obj.Telefono == "")
+            {
+                Mensaje += "ES NECESARIO UN NUMERO DE TELEFONO\n";
+            }
+
+            if (obj.Correo == "")
+            {
+                Mensaje += "ES NECESARIO EL CORREO\n";
+            }
+
+            if (obj.Clave == "")
             {
                 Mensaje += "ES NECESARIO LA CLAVE\n";
             }
@@ -63,10 +78,26 @@ namespace CapaNegocio
                 Mensaje += "ES NECESARIO EL NOMBRE\n";
             }
 
+            if (obj.Apellidos == "")
+            {
+                Mensaje += "ES NECESARIO EL APELLIDO\n";
+            }
+
+            if (obj.Telefono == "")
+            {
+                Mensaje += "ES NECESARIO UN NUMERO DE TELEFONO\n";
+            }
+
+            if (obj.Correo == "")
+            {
+                Mensaje += "ES NECESARIO EL CORREO\n";
+            }
+
             if (obj.Clave == "")
             {
                 Mensaje += "ES NECESARIO LA CLAVE\n";
             }
+
 
             if (Mensaje != string.Empty)
             {

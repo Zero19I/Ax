@@ -285,5 +285,22 @@ namespace CapaPresentacion.Formularios
                 row.Visible = true;
             }
         }
+
+        private void txtCelular_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCelular_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCelular.Text.Length > 8)
+            {
+                txtCelular.Text = txtCelular.Text.Substring(0, 8);
+                txtCelular.SelectionStart = 8;
+            }
+        }
     }
 }

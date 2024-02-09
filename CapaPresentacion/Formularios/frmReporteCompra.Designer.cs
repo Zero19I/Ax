@@ -109,6 +109,7 @@ namespace CapaPresentacion.Formularios
             // 
             // cdoBusqueda
             // 
+            this.cdoBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cdoBusqueda.FormattingEnabled = true;
             this.cdoBusqueda.Location = new System.Drawing.Point(527, 181);
             this.cdoBusqueda.Name = "cdoBusqueda";
@@ -148,6 +149,7 @@ namespace CapaPresentacion.Formularios
             // 
             // cboproveedor
             // 
+            this.cboproveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboproveedor.FormattingEnabled = true;
             this.cboproveedor.Location = new System.Drawing.Point(805, 104);
             this.cboproveedor.Name = "cboproveedor";
@@ -167,7 +169,8 @@ namespace CapaPresentacion.Formularios
             // 
             // txtfechafin
             // 
-            this.txtfechafin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtfechafin.CustomFormat = "MMM dd yyyy";
+            this.txtfechafin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.txtfechafin.Location = new System.Drawing.Point(515, 105);
             this.txtfechafin.Name = "txtfechafin";
             this.txtfechafin.Size = new System.Drawing.Size(145, 20);
@@ -176,7 +179,8 @@ namespace CapaPresentacion.Formularios
             // 
             // txtfechainicio
             // 
-            this.txtfechainicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtfechainicio.CustomFormat = "MMM dd yyyy";
+            this.txtfechainicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.txtfechainicio.Location = new System.Drawing.Point(241, 105);
             this.txtfechainicio.Name = "txtfechainicio";
             this.txtfechainicio.Size = new System.Drawing.Size(145, 20);
@@ -281,13 +285,13 @@ namespace CapaPresentacion.Formularios
             // 
             // UsuarioRegistro
             // 
-            this.UsuarioRegistro.HeaderText = "UsuarioRegistro";
+            this.UsuarioRegistro.HeaderText = "UsuarioNombre";
             this.UsuarioRegistro.Name = "UsuarioRegistro";
             this.UsuarioRegistro.ReadOnly = true;
             // 
             // Apellidos
             // 
-            this.Apellidos.HeaderText = "Apellidos";
+            this.Apellidos.HeaderText = "UsuarioApellidos";
             this.Apellidos.Name = "Apellidos";
             this.Apellidos.ReadOnly = true;
             // 

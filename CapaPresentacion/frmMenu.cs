@@ -5,6 +5,7 @@ using System.Linq;
 using System.Windows.Forms;
 using CapaEntidad;
 using CapaNegocio;
+using CapaPresentacion.Dashboard;
 using CapaPresentacion.Formularios;
 using FontAwesome.Sharp;
 
@@ -58,6 +59,9 @@ namespace CapaPresentacion
 
             if (pnlreportes.Visible == true)
                 pnlreportes.Visible = false;
+
+            if (pnlGarantia.Visible == true)
+                pnlGarantia.Visible = false;
         }
 
         private void ShowSubMenu(Panel SubMenu)
@@ -188,6 +192,36 @@ namespace CapaPresentacion
         {
             AbrirFormulario((IconButton)sender, new FrmNegocio());
 
+        }
+
+        private void menuEstadistica_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario((IconButton)sender, new frmDashboard());
+        }
+
+        private void menuGarantia_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(pnlGarantia);
+        }
+
+        private void btnGaranCliente_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(menuGarantia, new frmGarantiaCliente());
+            HideSubmenu();
+        }
+
+        private void btnGaranProveedor_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(menuGarantia, new frmGarantiaProveedor());
+            HideSubmenu();
+        }
+
+        private void btnRetroceder_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿DESEA SALIR?","MENSAJE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }

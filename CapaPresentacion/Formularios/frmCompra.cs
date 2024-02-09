@@ -186,7 +186,6 @@ namespace CapaPresentacion.Formularios
             txtCodProducto.BackColor = Color.White;
             txtProducto.Text = "";
             txtprecioC.Text = "";
-            txtTotalpagar.Text = "";
             txtPecioVenta.Text = "";
             txtCantidad.Value = 1;
         }
@@ -322,6 +321,7 @@ namespace CapaPresentacion.Formularios
                 txtRazonSocialP.Text = "";
                 dgvdata.Rows.Clear();
                 CalcularTotal();
+                txtTotalpagar.Text = "0.00";
             }
             else
             {

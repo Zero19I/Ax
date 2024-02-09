@@ -12,12 +12,12 @@ namespace CapaNegocio
     {
         private CD_Reporte objcd_Reporte = new CD_Reporte();
 
-        public List<ReporteCompra> Compra(string fechainicio, string fechafin, int idproveedor)
+        public List<ReporteCompra> Compra(DateTime fechainicio, DateTime fechafin, int idproveedor)
         {
             return objcd_Reporte.Compra(fechainicio, fechafin, idproveedor);
         }
 
-        public List<ReporteVenta> Compra(string fechainico, string fechafin)
+        public List<ReporteVenta> Venta(DateTime fechainico, DateTime fechafin)
         {
             return objcd_Reporte.Venta(fechainico, fechafin);
         }

@@ -11,7 +11,7 @@ namespace CapaDatos
 {
     public class CD_Reporte
     {
-        public List<ReporteCompra> Compra(string fechainicio, string fechafin, int idproveedor)
+        public List<ReporteCompra> Compra(DateTime fechainicio, DateTime fechafin, int idproveedor)
         {
             List<ReporteCompra> lista = new List<ReporteCompra>();
 
@@ -59,7 +59,7 @@ namespace CapaDatos
             return lista;
         }
 
-        public List<ReporteVenta> Venta(string fechainicio, string fechafin)
+        public List<ReporteVenta> Venta(DateTime fechainicio, DateTime fechafin)
         {
             List<ReporteVenta> Lista = new List<ReporteVenta>();
 
@@ -87,6 +87,7 @@ namespace CapaDatos
                                 UsuarioRegistro = dr["UsuarioRegistro"].ToString(),
                                 Apellido = dr["Apellidos"].ToString(),
                                 Marca = dr["Marca"].ToString(),
+                                DocumentoCliente = dr["DocumentoCliente"].ToString(),
                                 NombreCliente = dr["NombreCliente"].ToString(),
                                 CodigoProducto = dr["CodigoProducto"].ToString(),
                                 NombreProducto = dr["NombreProducto"].ToString(),

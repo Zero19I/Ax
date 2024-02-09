@@ -47,6 +47,8 @@
     <Compile Include="Dashboard.cs" />
     <Compile Include="Detalle_Compra.cs" />
     <Compile Include="Detalle_Venta.cs" />
+    <Compile Include="GarantiaCliente.cs" />
+    <Compile Include="GarantiaProveedor.cs" />
     <Compile Include="Marca.cs" />
     <Compile Include="Negocio.cs" />
     <Compile Include="Permiso.cs" />

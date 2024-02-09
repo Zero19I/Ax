@@ -160,90 +160,6 @@
     <Compile Include="Dashboard\frmDashboard.Designer.cs">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmCategoria.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmCategoria.Designer.cs">
-      <DependentUpon>frmCategoria.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmCliente.Designer.cs">
-      <DependentUpon>frmCliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmCompra.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmCompra.Designer.cs">
-      <DependentUpon>frmCompra.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmDetalleCompra.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmDetalleCompra.Designer.cs">
-      <DependentUpon>frmDetalleCompra.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmDetalleVenta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmDetalleVenta.Designer.cs">
-      <DependentUpon>frmDetalleVenta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmExistencia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmExistencia.Designer.cs">
-      <DependentUpon>frmExistencia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmMarca.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmMarca.Designer.cs">
-      <DependentUpon>frmMarca.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmNegocio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmNegocio.Designer.cs">
-      <DependentUpon>frmNegocio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmProducto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmProducto.Designer.cs">
-      <DependentUpon>frmProducto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmProveedores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmProveedores.Designer.cs">
-      <DependentUpon>frmProveedores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmReporteCompra.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmReporteCompra.Designer.cs">
-      <DependentUpon>frmReporteCompra.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmReporteVenta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmReporteVenta.Designer.cs">
-      <DependentUpon>frmReporteVenta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmUsuario.Designer.cs">
-      <DependentUpon>frmUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmVenta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmVenta.Designer.cs">
-      <DependentUpon>frmVenta.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\frmCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,6 +195,18 @@
     </Compile>
     <Compile Include="Formularios\frmExistencia.Designer.cs">
       <DependentUpon>frmExistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmGarantiaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmGarantiaCliente.Designer.cs">
+      <DependentUpon>frmGarantiaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmGarantiaProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmGarantiaProveedor.Designer.cs">
+      <DependentUpon>frmGarantiaProveedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmMarca.cs">
       <SubType>Form</SubType>
@@ -340,34 +268,22 @@
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inicio.cs">
+    <Compile Include="Formularios\Modales\mdCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inicio.Designer.cs">
-      <DependentUpon>Inicio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modales\mdCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modales\mdCliente.Designer.cs">
+    <Compile Include="Formularios\Modales\mdCliente.Designer.cs">
       <DependentUpon>mdCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modales\mdProducto.cs">
+    <Compile Include="Formularios\Modales\mdProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modales\mdProducto.Designer.cs">
+    <Compile Include="Formularios\Modales\mdProducto.Designer.cs">
       <DependentUpon>mdProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modales\mdProveedor.cs">
+    <Compile Include="Formularios\Modales\mdProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modales\mdProveedor.Designer.cs">
+    <Compile Include="Formularios\Modales\mdProveedor.Designer.cs">
       <DependentUpon>mdProveedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -375,45 +291,6 @@
     <Compile Include="Utilidades\opcionCombo.cs" />
     <EmbeddedResource Include="Dashboard\frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmCategoria.resx">
-      <DependentUpon>frmCategoria.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmCliente.resx">
-      <DependentUpon>frmCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmCompra.resx">
-      <DependentUpon>frmCompra.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmDetalleCompra.resx">
-      <DependentUpon>frmDetalleCompra.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmDetalleVenta.resx">
-      <DependentUpon>frmDetalleVenta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmMarca.resx">
-      <DependentUpon>frmMarca.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmNegocio.resx">
-      <DependentUpon>frmNegocio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmProducto.resx">
-      <DependentUpon>frmProducto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmProveedores.resx">
-      <DependentUpon>frmProveedores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmReporteCompra.resx">
-      <DependentUpon>frmReporteCompra.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmReporteVenta.resx">
-      <DependentUpon>frmReporteVenta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmUsuario.resx">
-      <DependentUpon>frmUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmVenta.resx">
-      <DependentUpon>frmVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmCategoria.resx">
       <DependentUpon>frmCategoria.cs</DependentUpon>
@@ -424,8 +301,17 @@
     <EmbeddedResource Include="Formularios\frmCompra.resx">
       <DependentUpon>frmCompra.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmDetalleCompra.resx">
+      <DependentUpon>frmDetalleCompra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmDetalleVenta.resx">
       <DependentUpon>frmDetalleVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmGarantiaCliente.resx">
+      <DependentUpon>frmGarantiaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmGarantiaProveedor.resx">
+      <DependentUpon>frmGarantiaProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmMarca.resx">
       <DependentUpon>frmMarca.cs</DependentUpon>
@@ -457,19 +343,13 @@
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inicio.resx">
-      <DependentUpon>Inicio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modales\mdCliente.resx">
+    <EmbeddedResource Include="Formularios\Modales\mdCliente.resx">
       <DependentUpon>mdCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modales\mdProducto.resx">
+    <EmbeddedResource Include="Formularios\Modales\mdProducto.resx">
       <DependentUpon>mdProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modales\mdProveedor.resx">
+    <EmbeddedResource Include="Formularios\Modales\mdProveedor.resx">
       <DependentUpon>mdProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -38,8 +38,8 @@ namespace CapaPresentacion.Modales
             this.label10 = new System.Windows.Forms.Label();
             this.btnLimpiarBuscador = new FontAwesome.Sharp.IconButton();
             this.btnBuscar = new FontAwesome.Sharp.IconButton();
-            this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdata)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,8 +57,8 @@ namespace CapaPresentacion.Modales
             this.dgvdata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvdata.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Usuario,
-            this.Nombre});
+            this.Nombre,
+            this.Apellido});
             this.dgvdata.Location = new System.Drawing.Point(64, 139);
             this.dgvdata.MultiSelect = false;
             this.dgvdata.Name = "dgvdata";
@@ -106,7 +106,7 @@ namespace CapaPresentacion.Modales
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(554, 88);
             this.label10.TabIndex = 58;
-            this.label10.Text = "LISTA DE USUARIO";
+            this.label10.Text = "LISTA DE CLIENTES";
             // 
             // btnLimpiarBuscador
             // 
@@ -145,21 +145,21 @@ namespace CapaPresentacion.Modales
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // Usuario
-            // 
-            this.Usuario.FillWeight = 123.4557F;
-            this.Usuario.HeaderText = "Usuario";
-            this.Usuario.Name = "Usuario";
-            this.Usuario.ReadOnly = true;
-            this.Usuario.Width = 92;
-            // 
             // Nombre
             // 
             this.Nombre.FillWeight = 114.2831F;
-            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.HeaderText = "Nombres";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
             this.Nombre.Width = 85;
+            // 
+            // Apellido
+            // 
+            this.Apellido.FillWeight = 123.4557F;
+            this.Apellido.HeaderText = "Apellidos";
+            this.Apellido.Name = "Apellido";
+            this.Apellido.ReadOnly = true;
+            this.Apellido.Width = 92;
             // 
             // mdCliente
             // 
@@ -174,6 +174,7 @@ namespace CapaPresentacion.Modales
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label10);
             this.Name = "mdCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "mdCliente";
             this.Load += new System.EventHandler(this.mdCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvdata)).EndInit();
@@ -191,7 +192,7 @@ namespace CapaPresentacion.Modales
         private System.Windows.Forms.TextBox txtBusqueda;
         private FontAwesome.Sharp.IconButton btnBuscar;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Usuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
     }
 }

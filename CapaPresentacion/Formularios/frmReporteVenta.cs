@@ -14,6 +14,9 @@ namespace CapaPresentacion.Formularios
         public frmReporteVenta()
         {
             InitializeComponent();
+
+            txtfechainicio.Value = DateTime.Today.AddDays(-7);
+            txtfechafin.Value = DateTime.Now;
         }
 
         private void frmReporteVenta_Load(object sender, EventArgs e)
@@ -26,17 +29,20 @@ namespace CapaPresentacion.Formularios
             cdoBusqueda.DisplayMember = "Texto";
             cdoBusqueda.ValueMember = "Valor";
             cdoBusqueda.SelectedIndex = 0;
+
+            Cargar();
         }
 
         private void btnbuscar_Click(object sender, EventArgs e)
         {
+            Cargar();
+        }
+
+        private void Cargar()
+        {
             List<ReporteVenta> lista = new List<ReporteVenta>();
 
-            lista = new CN_Reporte().Compra
-                (
-                txtfechainicio.Value.ToString(),
-                txtfechafin.Value.ToString()
-                );
+            lista = new CN_Reporte().Venta(txtfechainicio.Value, txtfechafin.Value);
 
             dgvdata.Rows.Clear();
 
@@ -48,6 +54,7 @@ namespace CapaPresentacion.Formularios
                     rc.NumeroDocumento,
                     rc.UsuarioRegistro,
                     rc.Apellido,
+                    rc.DocumentoCliente,
                     rc.NombreCliente,
                     rc.CodigoProducto,
                     rc.NombreProducto,
@@ -110,7 +117,7 @@ namespace CapaPresentacion.Formularios
                 {
                     if (row.Visible)
                         dataTable.Rows.Add(new object[]
-                            {
+                        {
                                 row.Cells[0].Value.ToString(),
                                 row.Cells[1].Value.ToString(),
                                 row.Cells[2].Value.ToString(),
@@ -123,7 +130,8 @@ namespace CapaPresentacion.Formularios
                                 row.Cells[9].Value.ToString(),
                                 row.Cells[10].Value.ToString(),
                                 row.Cells[11].Value.ToString(),
-                            });
+                                row.Cells[12].Value.ToString(),
+                        });
                 }
 
                 SaveFileDialog saveFile = new SaveFileDialog();

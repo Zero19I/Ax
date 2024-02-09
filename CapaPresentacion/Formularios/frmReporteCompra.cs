@@ -14,6 +14,9 @@ namespace CapaPresentacion.Formularios
         public frmReporteCompra()
         {
             InitializeComponent();
+
+            txtfechainicio.Value = DateTime.Today.AddDays(-7);
+            txtfechafin.Value = DateTime.Now;
         }
 
         private void frmReporteCompra_Load(object sender, EventArgs e)
@@ -39,29 +42,34 @@ namespace CapaPresentacion.Formularios
             cdoBusqueda.DisplayMember = "Texto";
             cdoBusqueda.ValueMember = "Valor";
             cdoBusqueda.SelectedIndex = 0;
+
+            carga();
         }
 
         private void btnbuscar_Click(object sender, EventArgs e)
         {
+            carga();
+        }
 
+        private void carga()
+        {
+            int idproveedor = Convert.ToInt32(((opcionCombo)cboproveedor.SelectedItem).Valor.ToString());
+
+            List<ReporteCompra> lista = new List<ReporteCompra>();
+
+            lista = new CN_Reporte().Compra
+                (
+                txtfechainicio.Value,
+                txtfechafin.Value,
+                idproveedor
+                );
+
+            dgvdata.Rows.Clear();
+
+            foreach (ReporteCompra rc in lista)
             {
-                int idproveedor = Convert.ToInt32(((opcionCombo)cboproveedor.SelectedItem).Valor.ToString());
-
-                List<ReporteCompra> lista = new List<ReporteCompra>();
-
-                lista = new CN_Reporte().Compra
-                    (
-                    txtfechainicio.Value.ToString(),
-                    txtfechafin.Value.ToString(),
-                    idproveedor
-                    );
-
-                dgvdata.Rows.Clear();
-
-                foreach (ReporteCompra rc in lista)
+                dgvdata.Rows.Add(new object[]
                 {
-                    dgvdata.Rows.Add(new object[]
-                    {
                     rc.FechaRegistro,
                     rc.NumeroDocumento,
                     rc.UsuarioRegistro,
@@ -75,8 +83,7 @@ namespace CapaPresentacion.Formularios
                     rc.PrecioVenta,
                     rc.Cantidad,
                     rc.SubTotal
-                    });
-                }
+                });
             }
         }
 

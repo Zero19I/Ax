@@ -20,7 +20,7 @@ namespace CapaDatos
                 try
                 {
                     StringBuilder query = new StringBuilder();
-                    query.AppendLine("SELECT PkCliente_Id, Documento, Nombre, Correo, Telefono, Estado FROM Tbl_Cliente");
+                    query.AppendLine("SELECT PkCliente_Id, Nombre, Apellido, Correo, Telefono, Estado FROM Tbl_Cliente");
 
                     SqlCommand cmd = new SqlCommand(query.ToString(), oConexion);
                     cmd.CommandType = CommandType.Text;
@@ -34,8 +34,8 @@ namespace CapaDatos
                             Lista.Add(new Cliente()
                             {
                                 PkCliente_Id = Convert.ToInt32(dr["PkCliente_Id"]),
-                                Documento = dr["Documento"].ToString(),
                                 Nombre = dr["Nombre"].ToString(),
+                                Apellido = dr["Apellido"].ToString(),
                                 Correo = dr["Correo"].ToString(),
                                 Telefono = dr["Telefono"].ToString(),
                                 Estado = Convert.ToBoolean(dr["Estado"]),
@@ -62,8 +62,8 @@ namespace CapaDatos
                 {
 
                     SqlCommand cmd = new SqlCommand("SP_REGISTRARCLIENTES", oConexion);
-                    cmd.Parameters.AddWithValue("documento", obj.Documento);
                     cmd.Parameters.AddWithValue("nombre", obj.Nombre);
+                    cmd.Parameters.AddWithValue("apellido", obj.Apellido);
                     cmd.Parameters.AddWithValue("correo", obj.Correo);
                     cmd.Parameters.AddWithValue("telefono", obj.Telefono);
                     cmd.Parameters.AddWithValue("estado", obj.Estado);
@@ -103,8 +103,8 @@ namespace CapaDatos
 
                     SqlCommand cmd = new SqlCommand("SP_MODIFICARCLIENTE", oConexion);
                     cmd.Parameters.AddWithValue("idcliente", obj.PkCliente_Id);
-                    cmd.Parameters.AddWithValue("documento", obj.Documento);
                     cmd.Parameters.AddWithValue("nombre", obj.Nombre);
+                    cmd.Parameters.AddWithValue("apellido", obj.Apellido);
                     cmd.Parameters.AddWithValue("correo", obj.Correo);
                     cmd.Parameters.AddWithValue("telefono", obj.Telefono);
                     cmd.Parameters.AddWithValue("estado", obj.Estado);

@@ -77,8 +77,11 @@ namespace CapaPresentacion.Formularios
             // 
             // cboTipoDocumento
             // 
+            this.cboTipoDocumento.BackColor = System.Drawing.Color.White;
+            this.cboTipoDocumento.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTipoDocumento.Location = new System.Drawing.Point(259, 89);
             this.cboTipoDocumento.Name = "cboTipoDocumento";
+            this.cboTipoDocumento.ReadOnly = true;
             this.cboTipoDocumento.Size = new System.Drawing.Size(171, 26);
             this.cboTipoDocumento.TabIndex = 31;
             this.cboTipoDocumento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -96,8 +99,11 @@ namespace CapaPresentacion.Formularios
             // 
             // txtFecha
             // 
+            this.txtFecha.BackColor = System.Drawing.Color.White;
+            this.txtFecha.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFecha.Location = new System.Drawing.Point(29, 89);
             this.txtFecha.Name = "txtFecha";
+            this.txtFecha.ReadOnly = true;
             this.txtFecha.Size = new System.Drawing.Size(171, 26);
             this.txtFecha.TabIndex = 29;
             this.txtFecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -123,7 +129,7 @@ namespace CapaPresentacion.Formularios
             this.INCOMPRA.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.INCOMPRA.Location = new System.Drawing.Point(68, 26);
             this.INCOMPRA.Name = "INCOMPRA";
-            this.INCOMPRA.Size = new System.Drawing.Size(451, 178);
+            this.INCOMPRA.Size = new System.Drawing.Size(460, 178);
             this.INCOMPRA.TabIndex = 65;
             this.INCOMPRA.TabStop = false;
             this.INCOMPRA.Text = "Informacion de la compra";
@@ -244,8 +250,10 @@ namespace CapaPresentacion.Formularios
             // 
             // txtTotalpagar
             // 
+            this.txtTotalpagar.BackColor = System.Drawing.Color.White;
             this.txtTotalpagar.Location = new System.Drawing.Point(943, 451);
             this.txtTotalpagar.Name = "txtTotalpagar";
+            this.txtTotalpagar.ReadOnly = true;
             this.txtTotalpagar.Size = new System.Drawing.Size(86, 20);
             this.txtTotalpagar.TabIndex = 70;
             // 
@@ -296,10 +304,14 @@ namespace CapaPresentacion.Formularios
             // 
             // txtRazonSocialP
             // 
+            this.txtRazonSocialP.BackColor = System.Drawing.Color.White;
+            this.txtRazonSocialP.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRazonSocialP.Location = new System.Drawing.Point(259, 89);
             this.txtRazonSocialP.Name = "txtRazonSocialP";
+            this.txtRazonSocialP.ReadOnly = true;
             this.txtRazonSocialP.Size = new System.Drawing.Size(171, 26);
             this.txtRazonSocialP.TabIndex = 31;
+            this.txtRazonSocialP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -314,10 +326,14 @@ namespace CapaPresentacion.Formularios
             // 
             // txtNumDocumentoP
             // 
+            this.txtNumDocumentoP.BackColor = System.Drawing.Color.White;
+            this.txtNumDocumentoP.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumDocumentoP.Location = new System.Drawing.Point(29, 89);
             this.txtNumDocumentoP.Name = "txtNumDocumentoP";
+            this.txtNumDocumentoP.ReadOnly = true;
             this.txtNumDocumentoP.Size = new System.Drawing.Size(171, 26);
             this.txtNumDocumentoP.TabIndex = 29;
+            this.txtNumDocumentoP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
@@ -364,7 +380,7 @@ namespace CapaPresentacion.Formularios
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(841, 55);
+            this.txtCantidad.Location = new System.Drawing.Point(841, 59);
             this.txtCantidad.Maximum = new decimal(new int[] {
             30,
             0,
@@ -397,7 +413,8 @@ namespace CapaPresentacion.Formularios
             // 
             // txtPecioVenta
             // 
-            this.txtPecioVenta.Location = new System.Drawing.Point(655, 55);
+            this.txtPecioVenta.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPecioVenta.Location = new System.Drawing.Point(655, 59);
             this.txtPecioVenta.Name = "txtPecioVenta";
             this.txtPecioVenta.Size = new System.Drawing.Size(171, 26);
             this.txtPecioVenta.TabIndex = 38;
@@ -416,7 +433,8 @@ namespace CapaPresentacion.Formularios
             // 
             // txtprecioC
             // 
-            this.txtprecioC.Location = new System.Drawing.Point(473, 55);
+            this.txtprecioC.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtprecioC.Location = new System.Drawing.Point(473, 59);
             this.txtprecioC.Name = "txtprecioC";
             this.txtprecioC.Size = new System.Drawing.Size(171, 26);
             this.txtprecioC.TabIndex = 36;
@@ -444,7 +462,7 @@ namespace CapaPresentacion.Formularios
             this.btnBuscarProducto.IconColor = System.Drawing.Color.White;
             this.btnBuscarProducto.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnBuscarProducto.IconSize = 15;
-            this.btnBuscarProducto.Location = new System.Drawing.Point(206, 55);
+            this.btnBuscarProducto.Location = new System.Drawing.Point(206, 59);
             this.btnBuscarProducto.Name = "btnBuscarProducto";
             this.btnBuscarProducto.Size = new System.Drawing.Size(32, 27);
             this.btnBuscarProducto.TabIndex = 34;
@@ -454,10 +472,14 @@ namespace CapaPresentacion.Formularios
             // 
             // txtProducto
             // 
-            this.txtProducto.Location = new System.Drawing.Point(259, 55);
+            this.txtProducto.BackColor = System.Drawing.Color.White;
+            this.txtProducto.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProducto.Location = new System.Drawing.Point(259, 59);
             this.txtProducto.Name = "txtProducto";
+            this.txtProducto.ReadOnly = true;
             this.txtProducto.Size = new System.Drawing.Size(171, 26);
             this.txtProducto.TabIndex = 31;
+            this.txtProducto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label8
             // 
@@ -472,10 +494,14 @@ namespace CapaPresentacion.Formularios
             // 
             // txtCodProducto
             // 
-            this.txtCodProducto.Location = new System.Drawing.Point(29, 55);
+            this.txtCodProducto.BackColor = System.Drawing.Color.White;
+            this.txtCodProducto.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodProducto.Location = new System.Drawing.Point(29, 59);
             this.txtCodProducto.Name = "txtCodProducto";
+            this.txtCodProducto.ReadOnly = true;
             this.txtCodProducto.Size = new System.Drawing.Size(171, 26);
             this.txtCodProducto.TabIndex = 29;
+            this.txtCodProducto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCodProducto.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCodProducto_KeyDown);
             // 
             // label9

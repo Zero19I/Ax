@@ -63,8 +63,8 @@ namespace CapaPresentacion.Formularios
                 (new object[] {
                     "",
                     item.PkCliente_Id,
-                    item.Documento,
                     item.Nombre,
+                    item.Apellido,
                     item.Correo,
                     item.Telefono,
                     item.Estado == true ? 1 : 0,
@@ -80,8 +80,8 @@ namespace CapaPresentacion.Formularios
             Cliente obj = new Cliente()
             {
                 PkCliente_Id = Convert.ToInt32(txtId.Text),
-                Documento = txtUsuario.Text,
                 Nombre = txtNombre.Text,
+                Apellido = txtApellido.Text,
                 Correo = txtCorreo.Text,
                 Telefono = txtCelular.Text,
                 Estado = Convert.ToInt32(((opcionCombo)cdoEstado.SelectedItem).Valor) == 1 ? true : false
@@ -97,8 +97,8 @@ namespace CapaPresentacion.Formularios
                     {
                         "",
                         idgenerado,
-                        txtUsuario.Text,
                         txtNombre.Text,
+                        txtApellido.Text,
                         txtCorreo.Text,
                         txtCelular.Text,
                         ((opcionCombo)cdoEstado.SelectedItem).Valor.ToString(),
@@ -122,8 +122,8 @@ namespace CapaPresentacion.Formularios
                 {
                     DataGridViewRow row = dgvdata.Rows[Convert.ToInt32(txtIndice.Text)];
                     row.Cells["Id"].Value = txtId.Text;
-                    row.Cells["Usuario"].Value = txtUsuario.Text;
                     row.Cells["Nombre"].Value = txtNombre.Text;
+                    row.Cells["Apellido"].Value = txtApellido.Text;
                     row.Cells["Correo"].Value = txtCorreo.Text;
                     row.Cells["Telefono"].Value = txtCelular.Text;
                     row.Cells["EstadoValor"].Value = ((opcionCombo)cdoEstado.SelectedItem).Valor.ToString();
@@ -142,13 +142,13 @@ namespace CapaPresentacion.Formularios
         {
             txtIndice.Text = "-1";
             txtId.Text = "0";
-            txtUsuario.Text = "";
+            txtApellido.Text = "";
             txtNombre.Text = "";
             txtCorreo.Text = "";
             txtCelular.Text = ""; ;
             cdoEstado.SelectedIndex = 0;
 
-            txtUsuario.Select();
+            txtNombre.Select();
         }
 
         private void dgvdata_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -161,8 +161,8 @@ namespace CapaPresentacion.Formularios
                 {
                     txtIndice.Text = indice.ToString();
                     txtId.Text = dgvdata.Rows[indice].Cells["Id"].Value.ToString();
-                    txtUsuario.Text = dgvdata.Rows[indice].Cells["Usuario"].Value.ToString();
                     txtNombre.Text = dgvdata.Rows[indice].Cells["Nombre"].Value.ToString();
+                    txtApellido.Text = dgvdata.Rows[indice].Cells["Apellido"].Value.ToString();
                     txtCorreo.Text = dgvdata.Rows[indice].Cells["Correo"].Value.ToString();
                     txtCelular.Text = dgvdata.Rows[indice].Cells["Telefono"].Value.ToString();
 
@@ -241,6 +241,23 @@ namespace CapaPresentacion.Formularios
             foreach (DataGridViewRow row in dgvdata.Rows)
             {
                 row.Visible = true;
+            }
+        }
+
+        private void txtCelular_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCelular_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCelular.Text.Length > 8)
+            {
+                txtCelular.Text = txtCelular.Text.Substring(0, 8);
+                txtCelular.SelectionStart = 8;
             }
         }
     }

@@ -24,7 +24,7 @@ namespace CapaNegocio
 
             if (obj.Documento == "")
             {
-                Mensaje += "ES NECESARIO UN Proveedor\n";
+                Mensaje += "ES NECESARIO UN PROVEEDOR\n";
             }
 
             if (obj.RazonSocial == "")
@@ -35,6 +35,11 @@ namespace CapaNegocio
             if (obj.Correo == "")
             {
                 Mensaje += "ES NECESARIO EL CORREO\n";
+            }
+
+            if (obj.Telefono == "")
+            {
+                Mensaje += "ES NECESARIO UN NUMERO DE TELEFONO\n";
             }
 
             if (Mensaje != string.Empty)
@@ -66,6 +71,11 @@ namespace CapaNegocio
             if (obj.Correo == "")
             {
                 Mensaje += "ES NECESARIO EL CORREO\n";
+            }
+
+            if (obj.Telefono == "")
+            {
+                Mensaje += "ES NECESARIO UN NUMERO DE TELEFONO\n";
             }
 
             if (Mensaje != string.Empty)

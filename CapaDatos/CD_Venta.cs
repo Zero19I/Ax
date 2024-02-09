@@ -98,7 +98,7 @@ namespace CapaDatos
 
 
 
-        public bool Registrar(Venta obj, DataTable DetalleVenta, out string Mensaje)
+        public bool Registrar(Venta obj, DataTable DetalleVenta, out string Mensaje, /*borar*/ DataTable idborrar )
         {
             bool respuesta = false;
             Mensaje = string.Empty;
@@ -120,6 +120,8 @@ namespace CapaDatos
                     cmd.Parameters.Add("resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("mensaje", SqlDbType.VarChar, (500)).Direction = ParameterDirection.Output;
                     cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("idproducto", idborrar);
 
                     oconexion.Open();
                     cmd.ExecuteNonQuery();
@@ -147,7 +149,7 @@ namespace CapaDatos
                     conexion.Open();
 
                     StringBuilder query = new StringBuilder();
-                    query.AppendLine("SELECT v.PkVenta_Id,u.Nombre,");
+                    query.AppendLine("SELECT v.PkVenta_Id,u.Nombre,u.Apellidos,");
                     query.AppendLine("v.DocumentoCliente, v.NombreCliente,");
                     query.AppendLine("v.TipoDocumento,v.NumeroDocumento,");
                     query.AppendLine("v.MontoPago,v.MontoCambio,V.MontoTotal,");
@@ -167,7 +169,7 @@ namespace CapaDatos
                             obj = new Venta()
                             {
                                 PkVenta_Id = int.Parse(dr["PkVenta_Id"].ToString()),
-                                oUsuario = new Usuario() {Nombre = dr["Nombre"].ToString()},
+                                oUsuario = new Usuario() {Nombre = dr["Nombre"].ToString(), Apellidos = dr["Apellidos"].ToString()},
                                 DocumentoCliente = dr["DocumentoCliente"].ToString(),
                                 NumeroDocumento = dr["NumeroDocumento"].ToString(),
                                 NombreCliente = dr["NombreCliente"].ToString(),

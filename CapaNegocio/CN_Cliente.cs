@@ -23,19 +23,24 @@ namespace CapaNegocio
 
             Mensaje = string.Empty;
 
-            if (obj.Documento == "")
-            {
-                Mensaje += "ES NECESARIO UN USUARIO\n";
-            }
-
             if (obj.Nombre == "")
             {
-                Mensaje += "ES NECESARIO EL NOMBRE\n";
+                Mensaje += "ES NECESARIO UN NOMBRE\n";
+            }
+
+            if (obj.Apellido == "")
+            {
+                Mensaje += "ES NECESARIO UN APELLIDO\n";
             }
 
             if (obj.Correo == "")
             {
                 Mensaje += "ES NECESARIO EL CORREO\n";
+            }
+
+            if (obj.Telefono == "")
+            {
+                Mensaje += "ES NECESARIO EL CELULAR\n";
             }
 
             if (Mensaje != string.Empty)
@@ -54,19 +59,24 @@ namespace CapaNegocio
         {
             Mensaje = string.Empty;
 
-            if (obj.Documento == "")
-            {
-                Mensaje += "ES NECESARIO UN Cliente\n";
-            }
-
             if (obj.Nombre == "")
             {
-                Mensaje += "ES NECESARIO EL NOMBRE\n";
+                Mensaje += "ES NECESARIO UN NOMBRE\n";
+            }
+
+            if (obj.Apellido == "")
+            {
+                Mensaje += "ES NECESARIO UN APELLIDO\n";
             }
 
             if (obj.Correo == "")
             {
                 Mensaje += "ES NECESARIO EL CORREO\n";
+            }
+
+            if (obj.Telefono == "")
+            {
+                Mensaje += "ES NECESARIO EL CELULAR\n";
             }
 
             if (Mensaje != string.Empty)

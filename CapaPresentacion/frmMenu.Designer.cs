@@ -51,8 +51,13 @@ namespace CapaPresentacion
             this.menuVentas = new FontAwesome.Sharp.IconButton();
             this.menuUsuarios = new FontAwesome.Sharp.IconButton();
             this.PanelMenu = new System.Windows.Forms.Panel();
+            this.pnlGarantia = new System.Windows.Forms.Panel();
+            this.btnGaranProveedor = new System.Windows.Forms.Button();
+            this.btnGaranCliente = new System.Windows.Forms.Button();
+            this.menuGarantia = new FontAwesome.Sharp.IconButton();
+            this.menuEstadistica = new FontAwesome.Sharp.IconButton();
             this.lblUsuario = new System.Windows.Forms.Label();
-            this.iconPictureBox5 = new FontAwesome.Sharp.IconPictureBox();
+            this.btnRetroceder = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -69,7 +74,8 @@ namespace CapaPresentacion
             this.pnlcompras.SuspendLayout();
             this.pnlventas.SuspendLayout();
             this.PanelMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).BeginInit();
+            this.pnlGarantia.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRetroceder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -440,6 +446,9 @@ namespace CapaPresentacion
             // 
             this.PanelMenu.AutoScroll = true;
             this.PanelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.PanelMenu.Controls.Add(this.pnlGarantia);
+            this.PanelMenu.Controls.Add(this.menuGarantia);
+            this.PanelMenu.Controls.Add(this.menuEstadistica);
             this.PanelMenu.Controls.Add(this.menuInfo);
             this.PanelMenu.Controls.Add(this.pnlreportes);
             this.PanelMenu.Controls.Add(this.menuReportes);
@@ -458,8 +467,96 @@ namespace CapaPresentacion
             this.PanelMenu.Size = new System.Drawing.Size(183, 619);
             this.PanelMenu.TabIndex = 10;
             // 
+            // pnlGarantia
+            // 
+            this.pnlGarantia.Controls.Add(this.btnGaranProveedor);
+            this.pnlGarantia.Controls.Add(this.btnGaranCliente);
+            this.pnlGarantia.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlGarantia.Location = new System.Drawing.Point(0, 818);
+            this.pnlGarantia.Name = "pnlGarantia";
+            this.pnlGarantia.Size = new System.Drawing.Size(166, 67);
+            this.pnlGarantia.TabIndex = 37;
+            this.pnlGarantia.Visible = false;
+            // 
+            // btnGaranProveedor
+            // 
+            this.btnGaranProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(111)))), ((int)(((byte)(122)))));
+            this.btnGaranProveedor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnGaranProveedor.FlatAppearance.BorderSize = 0;
+            this.btnGaranProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGaranProveedor.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGaranProveedor.ForeColor = System.Drawing.Color.White;
+            this.btnGaranProveedor.Location = new System.Drawing.Point(0, 33);
+            this.btnGaranProveedor.Name = "btnGaranProveedor";
+            this.btnGaranProveedor.Size = new System.Drawing.Size(166, 34);
+            this.btnGaranProveedor.TabIndex = 17;
+            this.btnGaranProveedor.Text = "Proveedor";
+            this.btnGaranProveedor.UseVisualStyleBackColor = false;
+            this.btnGaranProveedor.Click += new System.EventHandler(this.btnGaranProveedor_Click);
+            // 
+            // btnGaranCliente
+            // 
+            this.btnGaranCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(111)))), ((int)(((byte)(122)))));
+            this.btnGaranCliente.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnGaranCliente.FlatAppearance.BorderSize = 0;
+            this.btnGaranCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGaranCliente.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGaranCliente.ForeColor = System.Drawing.Color.White;
+            this.btnGaranCliente.Location = new System.Drawing.Point(0, 0);
+            this.btnGaranCliente.Name = "btnGaranCliente";
+            this.btnGaranCliente.Size = new System.Drawing.Size(166, 33);
+            this.btnGaranCliente.TabIndex = 12;
+            this.btnGaranCliente.Text = "Cliente";
+            this.btnGaranCliente.UseVisualStyleBackColor = false;
+            this.btnGaranCliente.Click += new System.EventHandler(this.btnGaranCliente_Click);
+            // 
+            // menuGarantia
+            // 
+            this.menuGarantia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.menuGarantia.Dock = System.Windows.Forms.DockStyle.Top;
+            this.menuGarantia.FlatAppearance.BorderSize = 0;
+            this.menuGarantia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.menuGarantia.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuGarantia.ForeColor = System.Drawing.Color.White;
+            this.menuGarantia.IconChar = FontAwesome.Sharp.IconChar.Info;
+            this.menuGarantia.IconColor = System.Drawing.Color.White;
+            this.menuGarantia.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.menuGarantia.IconSize = 27;
+            this.menuGarantia.Location = new System.Drawing.Point(0, 766);
+            this.menuGarantia.Name = "menuGarantia";
+            this.menuGarantia.Size = new System.Drawing.Size(166, 52);
+            this.menuGarantia.TabIndex = 36;
+            this.menuGarantia.Text = "Garantias";
+            this.menuGarantia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.menuGarantia.UseVisualStyleBackColor = false;
+            this.menuGarantia.Click += new System.EventHandler(this.menuGarantia_Click);
+            // 
+            // menuEstadistica
+            // 
+            this.menuEstadistica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.menuEstadistica.Dock = System.Windows.Forms.DockStyle.Top;
+            this.menuEstadistica.FlatAppearance.BorderSize = 0;
+            this.menuEstadistica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.menuEstadistica.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuEstadistica.ForeColor = System.Drawing.Color.White;
+            this.menuEstadistica.IconChar = FontAwesome.Sharp.IconChar.Info;
+            this.menuEstadistica.IconColor = System.Drawing.Color.White;
+            this.menuEstadistica.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.menuEstadistica.IconSize = 27;
+            this.menuEstadistica.Location = new System.Drawing.Point(0, 714);
+            this.menuEstadistica.Name = "menuEstadistica";
+            this.menuEstadistica.Size = new System.Drawing.Size(166, 52);
+            this.menuEstadistica.TabIndex = 35;
+            this.menuEstadistica.Text = "Estadistica";
+            this.menuEstadistica.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.menuEstadistica.UseVisualStyleBackColor = false;
+            this.menuEstadistica.Click += new System.EventHandler(this.menuEstadistica_Click);
+            // 
             // lblUsuario
             // 
+            this.lblUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.White;
@@ -469,18 +566,19 @@ namespace CapaPresentacion
             this.lblUsuario.TabIndex = 5;
             this.lblUsuario.Text = "Jasson Ruiz.";
             // 
-            // iconPictureBox5
+            // btnRetroceder
             // 
-            this.iconPictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.iconPictureBox5.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
-            this.iconPictureBox5.IconColor = System.Drawing.Color.White;
-            this.iconPictureBox5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox5.IconSize = 26;
-            this.iconPictureBox5.Location = new System.Drawing.Point(1174, 10);
-            this.iconPictureBox5.Name = "iconPictureBox5";
-            this.iconPictureBox5.Size = new System.Drawing.Size(29, 26);
-            this.iconPictureBox5.TabIndex = 4;
-            this.iconPictureBox5.TabStop = false;
+            this.btnRetroceder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnRetroceder.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            this.btnRetroceder.IconColor = System.Drawing.Color.White;
+            this.btnRetroceder.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRetroceder.IconSize = 26;
+            this.btnRetroceder.Location = new System.Drawing.Point(1174, 10);
+            this.btnRetroceder.Name = "btnRetroceder";
+            this.btnRetroceder.Size = new System.Drawing.Size(29, 26);
+            this.btnRetroceder.TabIndex = 4;
+            this.btnRetroceder.TabStop = false;
+            this.btnRetroceder.Click += new System.EventHandler(this.btnRetroceder_Click);
             // 
             // iconPictureBox2
             // 
@@ -511,7 +609,7 @@ namespace CapaPresentacion
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.panel2.Controls.Add(this.lblUsuarioApellido);
             this.panel2.Controls.Add(this.lblUsuario);
-            this.panel2.Controls.Add(this.iconPictureBox5);
+            this.panel2.Controls.Add(this.btnRetroceder);
             this.panel2.Controls.Add(this.iconPictureBox2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -522,10 +620,12 @@ namespace CapaPresentacion
             // 
             // lblUsuarioApellido
             // 
+            this.lblUsuarioApellido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.lblUsuarioApellido.AutoSize = true;
             this.lblUsuarioApellido.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuarioApellido.ForeColor = System.Drawing.Color.White;
-            this.lblUsuarioApellido.Location = new System.Drawing.Point(250, 13);
+            this.lblUsuarioApellido.Location = new System.Drawing.Point(254, 14);
             this.lblUsuarioApellido.Name = "lblUsuarioApellido";
             this.lblUsuarioApellido.Size = new System.Drawing.Size(96, 18);
             this.lblUsuarioApellido.TabIndex = 6;
@@ -642,7 +742,8 @@ namespace CapaPresentacion
             this.pnlcompras.ResumeLayout(false);
             this.pnlventas.ResumeLayout(false);
             this.PanelMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).EndInit();
+            this.pnlGarantia.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnRetroceder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -680,7 +781,7 @@ namespace CapaPresentacion
         private FontAwesome.Sharp.IconButton menuUsuarios;
         private System.Windows.Forms.Panel PanelMenu;
         private System.Windows.Forms.Label lblUsuario;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox5;
+        private FontAwesome.Sharp.IconPictureBox btnRetroceder;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
@@ -692,5 +793,10 @@ namespace CapaPresentacion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel Contenedor;
         private System.Windows.Forms.Label lblUsuarioApellido;
+        private FontAwesome.Sharp.IconButton menuGarantia;
+        private FontAwesome.Sharp.IconButton menuEstadistica;
+        private System.Windows.Forms.Panel pnlGarantia;
+        private System.Windows.Forms.Button btnGaranProveedor;
+        private System.Windows.Forms.Button btnGaranCliente;
     }
 }

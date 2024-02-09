@@ -11,8 +11,6 @@ namespace CapaNegocio
 {
     public class CN_Compra
     {
-        
-    
         private CD_Compra objcd_Compra = new CD_Compra();
 
         public int ObtenerCorrelativo()
@@ -32,10 +30,8 @@ namespace CapaNegocio
             if(oCompra.PkCompra_Id != 0)
             {
                 List<Detalle_Compra> oDetalleCompra = objcd_Compra.ObtenerDetalleCompra(oCompra.PkCompra_Id);
-
                 oCompra.oDetalleCompra = oDetalleCompra;
             }
-
             return oCompra;
         }
     }

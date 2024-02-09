@@ -15,12 +15,6 @@ namespace CapaPresentacion.Formularios
         {
             InitializeComponent();
         }
-
-        private void frmDetalleVenta_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             Venta oVenta = new CN_Venta().ObtenerVenta(txtBusqueda.Text);
@@ -32,6 +26,7 @@ namespace CapaPresentacion.Formularios
                 txtFecha.Text = oVenta.FechaRegistro;
                 txtTipodocumento.Text = oVenta.TipoDocumento;
                 txtUsuario.Text = oVenta.oUsuario.Nombre;
+                txtApellidosVe.Text = oVenta.oUsuario.Apellidos;
 
                 txtdoccliente.Text = oVenta.DocumentoCliente;
                 txtNombreCliente.Text = oVenta.NombreCliente;

@@ -29,10 +29,10 @@ namespace CapaPresentacion.Formularios
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.btnLimpiar = new FontAwesome.Sharp.IconButton();
             this.btnGuardar = new FontAwesome.Sharp.IconButton();
@@ -131,6 +131,7 @@ namespace CapaPresentacion.Formularios
             // 
             // cdoEstado
             // 
+            this.cdoEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cdoEstado.FormattingEnabled = true;
             this.cdoEstado.Location = new System.Drawing.Point(11, 361);
             this.cdoEstado.Name = "cdoEstado";
@@ -154,6 +155,8 @@ namespace CapaPresentacion.Formularios
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(327, 20);
             this.txtCelular.TabIndex = 14;
+            this.txtCelular.TextChanged += new System.EventHandler(this.txtCelular_TextChanged);
+            this.txtCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCelular_KeyPress);
             // 
             // label7
             // 
@@ -205,9 +208,9 @@ namespace CapaPresentacion.Formularios
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(8, 149);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 18);
+            this.label5.Size = new System.Drawing.Size(101, 18);
             this.label5.TabIndex = 9;
-            this.label5.Text = "razon social:";
+            this.label5.Text = "Razon social:";
             // 
             // btnBuscar
             // 
@@ -238,6 +241,7 @@ namespace CapaPresentacion.Formularios
             // 
             // cdoBusqueda
             // 
+            this.cdoBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cdoBusqueda.FormattingEnabled = true;
             this.cdoBusqueda.Location = new System.Drawing.Point(386, 88);
             this.cdoBusqueda.Name = "cdoBusqueda";
@@ -396,24 +400,24 @@ namespace CapaPresentacion.Formularios
             // 
             // Documento
             // 
-            dataGridViewCellStyle37.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Documento.DefaultCellStyle = dataGridViewCellStyle37;
-            this.Documento.HeaderText = "Usuario";
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Documento.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Documento.HeaderText = "Documento";
             this.Documento.Name = "Documento";
             this.Documento.ReadOnly = true;
             // 
             // RazonSocial
             // 
-            dataGridViewCellStyle38.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RazonSocial.DefaultCellStyle = dataGridViewCellStyle38;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RazonSocial.DefaultCellStyle = dataGridViewCellStyle2;
             this.RazonSocial.HeaderText = "RazonSocial";
             this.RazonSocial.Name = "RazonSocial";
             this.RazonSocial.ReadOnly = true;
             // 
             // Correo
             // 
-            dataGridViewCellStyle39.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Correo.DefaultCellStyle = dataGridViewCellStyle39;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Correo.DefaultCellStyle = dataGridViewCellStyle3;
             this.Correo.HeaderText = "Correo";
             this.Correo.Name = "Correo";
             this.Correo.ReadOnly = true;
@@ -433,8 +437,8 @@ namespace CapaPresentacion.Formularios
             // 
             // Estado
             // 
-            dataGridViewCellStyle40.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Estado.DefaultCellStyle = dataGridViewCellStyle40;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Estado.DefaultCellStyle = dataGridViewCellStyle4;
             this.Estado.HeaderText = "Estado";
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;

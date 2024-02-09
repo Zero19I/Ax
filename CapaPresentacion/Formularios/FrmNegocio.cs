@@ -18,6 +18,7 @@ namespace CapaPresentacion.Formularios
         {
             MemoryStream ms = new MemoryStream();
             ms.Write(imageBytes, 0, imageBytes.Length);
+
             Image image = new Bitmap(ms);
 
             return image;

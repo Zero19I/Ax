@@ -186,8 +186,15 @@ namespace CapaPresentacion.Dashboard
                     }
                     reader.Close();
 
-                    //OBTIENE LOS PRODUCTOS EN BAJO STOCK O MENOS VENDIDOS O PRODUCTO INACTIVOS QUE EXISTAN IGUAL MENOR A 6
-                    command.CommandText = "SELECT Nombre, Stock FROM tbl_Producto WHERE Stock<=6 AND Estado=0";
+                    //OBTIENE LOS PRODUCTOS EN MAL ESTADO
+                    command.CommandText = @"
+select p.Nombre,dv.cantidad from Tbl_Venta v
+inner join Tbl_DetalleVenta dv on dv.FkVenta_Id = v.PkVenta_Id
+inner join tbl_Producto p on p.PkProducto_Id = dv.FkProducto_Id
+inner join tbl_Categoria c on c.PkCategoria_Id = p.FkCategoria_Id
+inner join Tbl_Marca m on m.PkMarca_Id = p.FkMarca_Id
+inner join Tbl_Garantia g on g.IdVenta = v.PkVenta_Id AND G.IdProducto = P.PkProducto_Id
+WHERE p.FkCategoria_Id = 1 ";
                     reader = command.ExecuteReader();
                     while (reader.Read())
                     {
